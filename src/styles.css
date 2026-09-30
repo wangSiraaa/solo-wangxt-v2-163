@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 13px;
+  color: #1c1c1e;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 14px;
+  border-bottom: 1px solid #e5e5ea;
+  background: #f9f9fb;
+}
+
+.project-name {
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 4px 8px;
+  background: transparent;
+}
+.project-name:hover {
+  border-color: #d1d1d6;
+}
+
+.save-status {
+  color: #8e8e93;
+}
+.save-status.saved {
+  color: #30a46c;
+}
+.save-status.error {
+  color: #e5484d;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 14px;
+  border-bottom: 1px solid #e5e5ea;
+  background: #fff;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 12px;
+  border-right: 1px solid #eee;
+}
+.toolbar-group:last-child {
+  border-right: none;
+}
+
+button {
+  border: 1px solid #d1d1d6;
+  background: #fff;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+button:hover {
+  background: #f2f2f7;
+}
+button.active {
+  background: #3e63dd;
+  border-color: #3e63dd;
+  color: #fff;
+}
+button.small {
+  font-size: 11px;
+  padding: 2px 8px;
+  margin-left: 8px;
+}
+button.mini {
+  border: none;
+  background: transparent;
+  padding: 2px 4px;
+}
+button.danger {
+  color: #e5484d;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+.inline.toggle {
+  cursor: pointer;
+}
+.inline input[type='range'] {
+  width: 90px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 300px;
+  overflow-y: auto;
+  border-right: 1px solid #e5e5ea;
+  background: #f9f9fb;
+  padding: 10px;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+.panel h2 {
+  font-size: 13px;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+}
+.panel h3 {
+  font-size: 12px;
+  margin: 10px 0 6px;
+}
+
+.mode-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.mode-row button {
+  flex: 1;
+}
+
+.slider {
+  display: block;
+  margin-bottom: 8px;
+}
+.slider span {
+  display: block;
+  font-size: 11px;
+  color: #48484a;
+  margin-bottom: 2px;
+}
+.slider input {
+  width: 100%;
+}
+
+.vp-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  margin: 3px 0;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hint {
+  font-size: 11px;
+  color: #8e8e93;
+  margin: 6px 0 0;
+}
+
+.layer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.layer-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.layer-list li:hover {
+  background: #f2f2f7;
+}
+.layer-list li.active {
+  background: #e8edff;
+}
+.layer-name {
+  flex: 1;
+}
+.layer-name em {
+  float: right;
+  font-style: normal;
+  color: #8e8e93;
+  font-size: 11px;
+}
+
+.stage-wrap {
+  flex: 1;
+  position: relative;
+  background: #2c2c2e;
+  overflow: hidden;
+}
+
+.ok {
+  color: #30a46c;
+  font-size: 12px;
+  margin: 4px 0;
+}
+.bad {
+  color: #e5484d;
+  font-size: 12px;
+  margin: 4px 0;
+}
+.issue-list {
+  margin: 4px 0;
+  padding-left: 16px;
+}
+.resnap {
+  margin-bottom: 6px;
+}
